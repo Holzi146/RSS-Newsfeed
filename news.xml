@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html [
+  <!ENTITY % htmlDTD
+    PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
+  %htmlDTD;
+  <!ENTITY % globalDTD
+    SYSTEM "chrome://global/locale/global.dtd">
+  %globalDTD;
+  <!ENTITY % feedDTD
+    SYSTEM "chrome://browser/locale/feeds/subscribe.dtd">
+  %feedDTD;
+]>
+<?xml-stylesheet href="news-Dateien/global.css" type="text/css"?>
+<html id="feedHandler" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <title>news.ORF.at</title>
+    <link rel="stylesheet" href="news-Dateien/subscribe_002.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="news-Dateien/subscribe.css" type="text/css" media="all" />
+    <script type="application/javascript" src="news-Dateien/subscribe.txt"></script>
+  </head>
+  <body onload="SubscribeHandler.writeContent();" onunload="SubscribeHandler.uninit();">
+    <div id="feedHeaderContainer">
+      <div id="feedHeader" dir="ltr" class="feedBackground">
+        <div id="feedIntroText">
+          <p id="feedSubscriptionInfo1"></p>
+          <p id="feedSubscriptionInfo2"></p>
+        </div>
+        <div id="feedSubscribeLine"></div>
+      </div>
+    </div>
+
+    <script type="application/javascript">
+      SubscribeHandler.init();
+    </script>
+
+    <div id="feedBody">
+      <div id="feedTitle">
+        <a id="feedTitleLink">
+          <img id="feedTitleImage" />
+        </a>
+        <div id="feedTitleContainer">
+          <h1 id="feedTitleText">news.ORF.at</h1>
+          <h2 id="feedSubtitleText">Die aktuellsten Nachrichten auf einen Blick - aus Österreich und der ganzen Welt. In Text, Bild und Video.</h2>
+        </div>
+      </div>
+      <div id="feedContent"><div class="entry"><h3><a href="http://news.orf.at/stories/2221640/">EU-Saatgutverordnung vom EU-Parlament definitiv begraben</a><div class="lastUpdated">Dienstag, 11. März 2014 12:32</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221628/">PISA, TIMSS und Co.: Österreich sagt alle Bildungstests ab</a><div class="lastUpdated">Dienstag, 11. März 2014 12:25</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221637/">Keine Einigung auf EU-Zinsbesteuerungsrichtlinie</a><div class="lastUpdated">Dienstag, 11. März 2014 12:24</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221634/">Auch Teilnahme an PISA-Studie abgesagt</a><div class="lastUpdated">Dienstag, 11. März 2014 12:06</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221633/">Kreditschützer rechnen mit Sanierung von DiTech</a><div class="lastUpdated">Dienstag, 11. März 2014 12:06</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221632/">Stammzellen: Sensationsstudie vor Rückzug</a><div class="lastUpdated">Dienstag, 11. März 2014 11:58</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221631/">Spindelegger: Bankgeheimnis für Ausländer fällt 2017</a><div class="lastUpdated">Dienstag, 11. März 2014 11:57</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221623/">Medienberichte: Ostermayer entlässt Burg-Chef Hartmann</a><div class="lastUpdated">Dienstag, 11. März 2014 11:47</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221629/">Weiter Rätseln um Identität von Leiche in Donau</a><div class="lastUpdated">Dienstag, 11. März 2014 11:46</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221627/">Pharmakonzerne warnen vor Mohnmangel für Schmerzmittel</a><div class="lastUpdated">Dienstag, 11. März 2014 11:42</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221622/">Krim-Parlament erklärt Unabhängigkeit von Ukraine</a><div class="lastUpdated">Dienstag, 11. März 2014 11:26</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221620/">Medienberichte: Ostermayer entlässt Hartmann</a><div class="lastUpdated">Dienstag, 11. März 2014 11:24</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221618/">Grimm-Bilderbuch ist „schönste Buchproduktion“</a><div class="lastUpdated">Dienstag, 11. März 2014 11:12</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221616/">Formel 1: Red-Bull-Krise als Herausforderung</a><div class="lastUpdated">Dienstag, 11. März 2014 10:58</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221615/">Korruption: Sanader erneut schuldig gesprochen</a><div class="lastUpdated">Dienstag, 11. März 2014 10:55</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221613/">Neuseeland: Referendum über Union Jack</a><div class="lastUpdated">Dienstag, 11. März 2014 10:54</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221614/">Kanada fixiert Freihandelsabkommen mit Südkorea</a><div class="lastUpdated">Dienstag, 11. März 2014 10:52</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221612/">Opfer der Proteste in der Türkei nach Koma gestorben</a><div class="lastUpdated">Dienstag, 11. März 2014 09:56</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221609/">WIFO: Hypo-Profiteure sollen mitzahlen</a><div class="lastUpdated">Dienstag, 11. März 2014 09:53</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div><div class="entry"><h3><a href="http://news.orf.at/stories/2221611/">Hoeneß-Prozess geht mit Zeugenvernehmung weiter</a><div class="lastUpdated">Dienstag, 11. März 2014 09:52</div></h3><div class="feedEntryContent"></div></div><div style="clear: both;"></div></div>
+    </div>
+  </body>
+</html>
