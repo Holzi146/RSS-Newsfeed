@@ -1,0 +1,27 @@
+extends layout
+
+block content
+  script(type='text/javascript', src='/javascripts/javascript.js')
+  #header
+    h1 RSS - Newsfeed
+  #input
+    p Geben Sie eine Seite an, die RSS unterstützt : 
+    form(action='/rss', name='input', method='post')
+      input#tbx_input(type='text', name='tbx_input', onkeyup='KeyPressed(event)')
+      input#hidden_send(type='hidden', value='Senden')
+  #contentContainer
+    h2 Die akutellsten Feeds...
+    #content
+      - if (typeof(items) != 'undefined')  {
+          table(align='center')
+            thead
+
+            tbody
+            - for (var i = 0; i < items.length; i++)  {
+                tr
+                  td
+                    a(href=items[i].link) #{items[i].title}
+            - }
+      - }
+  #copyright
+    © Christoph Holzhauser, 2014
