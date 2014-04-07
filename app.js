@@ -20,8 +20,14 @@ app.get("/", function(req, res) {
   res.render('index', { title: 'Newsfeed mit Node.js' });
 });
 
-app.post("/rss", function(req, res) {	
-	GetRSS(req.body.tbx_input, function(items) {
+app.post("/rss", function(req, res) {
+
+  /* add http tag if it is missing */
+  var url = req.body.tbx_input;
+  if(url.slice(0,4) != 'http')
+    url = 'http://'.concat(url);
+
+	GetRSS(url, function(items) {
     /* get the items from the callback function (is null when an error is occured) */
     res.render('index', { title: 'Newsfeed mit Node.js', items: items });
   }); 
@@ -36,12 +42,14 @@ function GetRSS(url, callback)  {
   var FeedParser = require('feedparser')
   , request = require('request');
 
+  /* see if request(url) throws any errors */
   try  {
     var req = request(url), feedparser = new FeedParser();
   }
   
   catch(e)  {
     console.log("Site is not available or has no rss-feed built in...");
+    /* the callback function has to be called in every error-case */
     callback(null);
     return;
   }
@@ -51,10 +59,12 @@ function GetRSS(url, callback)  {
     callback(null);
     return;
   });
+  
   req.on('response', function (res) {
     var stream = this;
 
-    if (res.statusCode != 200) return this.emit('error', new Error('Bad status code'));
+    if (res.statusCode != 200) 
+      return this.emit('error', new Error('Bad status code'));
 
     stream.pipe(feedparser);
   });
@@ -66,10 +76,7 @@ function GetRSS(url, callback)  {
   });
 
   feedparser.on('readable', function() {
-    // This is where the action is!
-    var stream = this
-      , meta = this.meta // **NOTE** the "meta" is always available in the context of the feedparser instance
-      , item;
+    var stream = this, item;
 
     while (item = stream.read())  {
       items.push(item);
