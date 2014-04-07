@@ -22,7 +22,7 @@ app.get("/", function(req, res) {
 
 app.post("/rss", function(req, res) {	
 	GetRSS(req.body.tbx_input, function(items) {
-    /* get the items from the callback function */
+    /* get the items from the callback function (is null when an error is occured) */
     res.render('index', { title: 'Newsfeed mit Node.js', items: items });
   }); 
 });
@@ -36,11 +36,19 @@ function GetRSS(url, callback)  {
   var FeedParser = require('feedparser')
   , request = require('request');
 
-  var req = request(url)
-  , feedparser = new FeedParser();
+  try  {
+    var req = request(url), feedparser = new FeedParser();
+  }
+  
+  catch(e)  {
+    console.log("Site is not available or has no rss-feed built in...");
+    callback(null);
+    return;
+  }
 
   req.on('error', function (error) {
-    console.log("error");
+    console.log("Request Error");
+    callback(null);
     return;
   });
   req.on('response', function (res) {
@@ -52,7 +60,9 @@ function GetRSS(url, callback)  {
   });
 
   feedparser.on('error', function(error) {
-    // always handle errors
+    console.log("Feedparser Error");
+    callback(null);
+    return;
   });
 
   feedparser.on('readable', function() {

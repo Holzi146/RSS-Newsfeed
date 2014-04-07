@@ -9,19 +9,24 @@ block content
     form(action='/rss', name='input', method='post')
       input#tbx_input(type='text', name='tbx_input', onkeyup='KeyPressed(event)')
       input#hidden_send(type='hidden', value='Senden')
-  #contentContainer
-    h2 Die akutellsten Feeds...
-    #content
-      - if (typeof(items) != 'undefined')  {
+  - if (typeof(items) != 'undefined')  {
+    - if(items == null)  {
+        #contentContainer
+          h2 Keine Einträge gefunden...
+    - }
+    - else {
+      #contentContainer
+        h2 Die akutellsten Feeds...
+        #content  
           table(align='center')
             thead
-
             tbody
             - for (var i = 0; i < items.length; i++)  {
                 tr
                   td
                     a(href=items[i].link) #{items[i].title}
             - }
-      - }
+    - }
+  - }
   #copyright
     © Christoph Holzhauser, 2014
