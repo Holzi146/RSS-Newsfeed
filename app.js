@@ -33,9 +33,9 @@ app.post("/rss", function(req, res) {
   }); 
 });
 
-http.createServer(app).listen(8888);
+http.createServer(app).listen(1337);
 
-console.log("Service is running...\n");
+console.log("Listening on port 1337...\n");
 
 function GetRSS(url, callback)  {
   var items = [];
